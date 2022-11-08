@@ -38,12 +38,12 @@ const TripList = (props) => {
                     trip.map((trip, index) =>{
                         return(
                             <div className='card m-5 col-5 mx-auto text-center' key={index}>
-                                <div className="card-header bg-primary text-white"> {trip.city}, {trip.country}</div>
+                                <div id="card-header" className='card-header text-white'> {trip.city}, {trip.country}</div>
                                 <div className='card-body m-2'>
                                     <h3 className='card-title'>{trip.name}</h3>
                                     <h6 className='card-text'>{Moment(trip.arrival).format('MM-DD-YYYY')} - {Moment(trip.departure).format('MM-DD-YYYY')}</h6>
                                     <div>
-                                        <Link className="btn btn-outline-primary mx-1" to={`/trip/${trip._id}`}>Trip Details</Link>
+                                        <Link className="btn btn-outline-success m-3" to={`/trip/${trip._id}`}>Trip Details</Link>
                                     </div>
                                 </div>
                             </div>

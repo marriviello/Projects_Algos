@@ -25,6 +25,7 @@ const TripDetails = (props) => {
     //     }
     // }
 
+    //Specific Trip Info
     useEffect(() => {
         axios.get(`http://localhost:8000/api/trip/${id}`, {withCredentials:true, credentials:'include'})
         .then((result) => {
@@ -32,6 +33,7 @@ const TripDetails = (props) => {
         }).catch((error) => console.log(error))
     }, [id])
 
+    // Delete Trip
     const deleteTrip = (id) => {
         axios.delete(`http://localhost:8000/api/trip/delete/${id}`, {withCredentials:true, credentials:'include'})
             .then(res => navigate('/trips'))
@@ -40,7 +42,10 @@ const TripDetails = (props) => {
 
     return (
     <div>
+        {/* Nav Bar Component */}
         <NavBar/>
+
+        {/* Trip Title */}
         <div>
             <div className="d-flex align-items-center flex-column">
                 <h1 className="mt-5">{oneTrip.name}</h1>
@@ -48,13 +53,15 @@ const TripDetails = (props) => {
                     <p className="m-2">Arrival: {Moment(oneTrip.arrival).format('MM-DD-YYYY')} Departure: {Moment(oneTrip.departure).format('MM-DD-YYYY')}</p>
                 </div>
                 <div className="d-flex flex-row m-3">
-                    <Link to ={`/trip/edit/${oneTrip._id}`} className="btn btn-outline-primary m-3">Edit Trip</Link><br/>
+                    <Link to ={`/trip/edit/${oneTrip._id}`} className="btn btn-light btn-outline-success m-3">Edit Trip</Link><br/>
                     <button className="btn btn-outline-danger m-3" onClick={(e)=>deleteTrip(oneTrip._id)}>Delete Trip</button> <br/>
                 </div>
             </div>
-            <div className='border border-primary d-flex align-items-center flex-column m-5 col-5 mx-auto'>
-                <div className='text-primary m-3'>
-                    <h3>{oneTrip.city}, {oneTrip.country}</h3><br/>
+
+            {/* Card Info */}
+            <div id="details-card" className='d-flex align-items-center flex-column m-5 col-5 mx-auto bg-light'>
+                <div className='m-3'>
+                    <h3 id="details-card-location">{oneTrip.city}, {oneTrip.country}</h3><br/>
                 </div>
                 <div>
                     <p>Travel Type: {oneTrip.travelInfo} </p>

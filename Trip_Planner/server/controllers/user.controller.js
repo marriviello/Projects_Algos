@@ -8,6 +8,7 @@ module.exports = {
             try{
                 //Create new user
                 const newUser = await User.create(req.body)
+                console.log(newUser)
                 //Create JWT using secret key
                 const userToken = jwt.sign({_id:newUser._id, email:newUser.email},SECRET)
                 //Send JWT back to user as cookie

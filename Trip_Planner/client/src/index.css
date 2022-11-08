@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav {
+  background-color: #689f38;
+}
+
+img.nav {
+  width: 20px;
+  height: 20px;
+}
+
+#card-header, button{
+  background-color: #aed581;
+}
+
+#details-card {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #aed581;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#details-card-location {
+  color: #33691e;
+  font-family: Marker Felt, fantasy;
+  font-weight: bold;
+}
+
+#reg-page {
+  background-color: #dcedc8;
+}
+
+#hero-image {
+  background-image: url('https://w0.peakpx.com/wallpaper/102/600/HD-wallpaper-green-hills-green-mountains-nature-fields-misty-forests-valley.jpg');
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

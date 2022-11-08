@@ -27,7 +27,7 @@ const TripSchema = new mongoose.Schema({
     hotel: { 
         type: String,
         enum: ['Hotel', 'Airbnb', 'Hostel'],
-        required:[true,"Travel info is required"],
+        required:[true,"Accommodation info is required"],
     },
     hotelConfirmation: {
         type: String

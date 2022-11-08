@@ -53,9 +53,12 @@ const Form = (props) => {
 
     return(
         <div>
+            {/* Navbar Component */}
             <div>
                 <NavBar/>
             </div>
+
+            {/* Form */}
             <form onSubmit={ submitHandler } className="flex-column justify-content-center m-5 col-4 mx-auto">
                 <h3>Plan a trip:</h3><br/>
                 <div className="form-group">
@@ -168,7 +171,7 @@ const Form = (props) => {
                             { errors.departure ? <p className='alert alert-danger' >{errors.departure.message}</p>: null}
                     </div>
                 </div>
-                <button className="form-control btn btn-primary" type="submit" value="Add Trip">Add a trip!</button>
+                <button className="form-control btn btn-success" type="submit" value="Add Trip">Add a trip!</button>
             </form>
         </div>
     );
