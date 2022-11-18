@@ -61,7 +61,7 @@ const Register = () => {
                 <Link to={"/trip/create"} className="navbar-brand text-decoration-none text-white"><h4>Register</h4></Link>
             </nav>
 
-            <div id="hero-image" className="p-5 text-center bg-image">
+            <div style="background-image: url('https://w0.peakpx.com/wallpaper/102/600/HD-wallpaper-green-hills-green-mountains-nature-fields-misty-forests-valley.jpg');" className="p-5 text-center bg-image">
                 <div className="d-flex justify-content-center align-items-center mt-5">
                     <div className="text-white">
                     <h1 className="mb-3">Stay Organized with Trip Planner</h1>
